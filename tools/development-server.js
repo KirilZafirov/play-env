@@ -21,6 +21,6 @@ app.use('/env-config.js', (req, res) => {
 app.use(proxy('**', { target: `http://localhost:${cliPort}` , changeOrigin: true,}));
 
 const port = process.env.PORT || 3000;
-app.listen(cliPort, () => {
+app.listen(port, () => {
   const url = `http://localhost:${port}/`;
 });
