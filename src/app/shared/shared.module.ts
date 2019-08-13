@@ -12,7 +12,7 @@ import { AutocompleteComponent } from './autocomplete/autocomplete/autocomplete.
 import { FilterPipe } from './pipes/filter.pipe';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SpinnerOverlayComponent } from './components/spinner-overlay/spinner-overlay.component';
-import { SpinnerOverlayServiceService } from './services/spinner-overlay-service.service';
+import { SpinnerOverlayServiceService } from './components/spinner-overlay/spinner-overlay-service.service';
 
 const publicAutocompleteApi = [
   AutocompleteComponent,
