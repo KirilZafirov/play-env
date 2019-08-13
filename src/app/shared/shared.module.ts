@@ -10,6 +10,7 @@ import { AutocompleteContentDirective } from './autocomplete/autocomplete-conten
 import { AutocompleteDirective } from './autocomplete/autocomplete.directive';
 import { AutocompleteComponent } from './autocomplete/autocomplete/autocomplete.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 const publicAutocompleteApi = [
   AutocompleteComponent,
@@ -27,7 +28,9 @@ const publicAutocompleteApi = [
   declarations: [
     publicAutocompleteApi ,
     
-  FilterPipe],
+  FilterPipe,
+    
+  SpinnerComponent],
   exports: [
     CommonModule,
     FormsModule,
@@ -35,7 +38,8 @@ const publicAutocompleteApi = [
     MaterialModule,
     FlexLayoutModule , 
     publicAutocompleteApi,
-    FilterPipe
+    FilterPipe,
+    SpinnerComponent
   ],
   providers: [],
 })
