@@ -11,6 +11,8 @@ import { AutocompleteDirective } from './autocomplete/autocomplete.directive';
 import { AutocompleteComponent } from './autocomplete/autocomplete/autocomplete.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { SpinnerOverlayComponent } from './spinner-overlay/spinner-overlay.component';
+import { SpinnerOverlayServiceService } from './services/spinner-overlay-service.service';
 
 const publicAutocompleteApi = [
   AutocompleteComponent,
@@ -30,7 +32,8 @@ const publicAutocompleteApi = [
     
   FilterPipe,
     
-  SpinnerComponent],
+  SpinnerComponent , 
+  SpinnerOverlayComponent],
   exports: [
     CommonModule,
     FormsModule,
@@ -39,8 +42,10 @@ const publicAutocompleteApi = [
     FlexLayoutModule , 
     publicAutocompleteApi,
     FilterPipe,
-    SpinnerComponent
+    SpinnerComponent , 
+    SpinnerOverlayComponent
   ],
-  providers: [],
+  providers: [SpinnerOverlayServiceService],
+  entryComponents:[]
 })
 export class SharedModule {}
