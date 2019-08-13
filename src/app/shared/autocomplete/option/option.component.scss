@@ -4,6 +4,10 @@
     &.no-result {
         pointer-events: none;
       }
+      &:focus {
+        background: lightblue;
+        color: #fff;
+     }
   }
   
   
@@ -16,4 +20,11 @@
         background-color: lightgrey;
       }
   }
+  .active {
+    background-color: lightblue;
+    color: #fff;
+  }
   
+  .disabled {
+    opacity: 0.3;
+  }

@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { EnvConfig } from './env-config/env-config.model';
 import { AutocompleteComponent } from './shared/autocomplete/autocomplete/autocomplete.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 
 export function getEnvConfig() {
@@ -27,7 +28,7 @@ export function getEnvConfig() {
     CoreModule,
     SharedModule,
     AppRoutingModule,
-
+    DashboardModule,
   ],
   providers: [ { provide: EnvConfig, useFactory: getEnvConfig },],
   bootstrap: [AppComponent] , 
