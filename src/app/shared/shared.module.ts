@@ -10,8 +10,8 @@ import { AutocompleteContentDirective } from './autocomplete/autocomplete-conten
 import { AutocompleteDirective } from './autocomplete/autocomplete.directive';
 import { AutocompleteComponent } from './autocomplete/autocomplete/autocomplete.component';
 import { FilterPipe } from './pipes/filter.pipe';
-import { SpinnerComponent } from './spinner/spinner.component';
-import { SpinnerOverlayComponent } from './spinner-overlay/spinner-overlay.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SpinnerOverlayComponent } from './components/spinner-overlay/spinner-overlay.component';
 import { SpinnerOverlayServiceService } from './services/spinner-overlay-service.service';
 
 const publicAutocompleteApi = [

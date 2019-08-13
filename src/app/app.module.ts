@@ -9,7 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { EnvConfig } from './env-config/env-config.model';
 import { AutocompleteComponent } from './shared/autocomplete/autocomplete/autocomplete.component';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { SpinnerOverlayComponent } from './shared/spinner-overlay/spinner-overlay.component';
+import { SpinnerOverlayComponent } from './shared/components/spinner-overlay/spinner-overlay.component';
 
 
 export function getEnvConfig() {

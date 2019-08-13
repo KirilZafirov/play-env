@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
+import { SpinnerOverlayComponent } from '../components/spinner-overlay/spinner-overlay.component';
 
 @Injectable({
   providedIn: 'root'
