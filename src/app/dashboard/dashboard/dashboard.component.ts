@@ -4,6 +4,7 @@ import { FocusKeyManager, ActiveDescendantKeyManager } from '@angular/cdk/a11y';
 import { ENTER } from '@angular/cdk/keycodes';
 import { OptionComponent } from '@app/shared/autocomplete/option/option.component';
 import { PopoverService } from '@app/shared/components/popover/popover.service';
+import { InsidePopoverComponent } from '@app/shared/components/popover/inside-popover/inside-popover.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

@@ -5,6 +5,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { AutocompleteComponent } from '@app/shared/autocomplete/autocomplete/autocomplete.component';
 import { SpinnerOverlayComponent } from '@app/shared/components/spinner-overlay/spinner-overlay.component';
 import { PopoverComponent } from '@app/shared/components/popover/popover/popover.component';
+import { InsidePopoverComponent } from '@app/shared/components/popover/inside-popover/inside-popover.component';
 
 
 
@@ -15,6 +16,6 @@ import { PopoverComponent } from '@app/shared/components/popover/popover/popover
     CommonModule
   ],
   exports: [ ] ,
-  entryComponents:[DashboardRoutingModule.components , AutocompleteComponent, SpinnerOverlayComponent , PopoverComponent]
+  entryComponents:[DashboardRoutingModule.components , AutocompleteComponent, SpinnerOverlayComponent , PopoverComponent , InsidePopoverComponent]
 })
 export class DashboardModule { }

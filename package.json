@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "npm-run-all --parallel start:cli start:server ",
-    "start:cli": "ng serve",
+    "start:cli": "ng serve -o",
     "start:server": "node tools/development-server.js",
     "build": "ng build",
     "build:prod": "ng build --prod",
