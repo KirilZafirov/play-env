@@ -12,5 +12,5 @@ const routes: Routes = [
   exports: [ RouterModule ]
 })
 export class DashboardRoutingModule {
-  static components = [ DashboardComponent];
+  static components = [ DashboardComponent ];
 }

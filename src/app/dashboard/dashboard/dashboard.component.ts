@@ -1,8 +1,9 @@
-import {Component, QueryList, ViewChildren, OnInit} from '@angular/core';
+import {Component, QueryList, ViewChildren, OnInit, TemplateRef} from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { FocusKeyManager, ActiveDescendantKeyManager } from '@angular/cdk/a11y';
 import { ENTER } from '@angular/cdk/keycodes';
 import { OptionComponent } from '@app/shared/autocomplete/option/option.component';
+import { PopoverService } from '@app/shared/components/popover/popover.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -12,7 +13,7 @@ export class DashboardComponent implements OnInit {
 
   @ViewChildren(OptionComponent) items: QueryList<OptionComponent>;
  
-  constructor() {
+  constructor(private popper: PopoverService) {
   }
 
   ngOnInit(){}
@@ -48,4 +49,21 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  show(content: TemplateRef<any>, origin) {
+    const ref = this.popper.open<{ skills: number[] }>({
+      content,
+      //  content: 'Hello world!',
+      // content: InsidePopoverComponent,
+      origin,
+      width: '200px',
+      data: {
+        skills: [1, 2, 3]
+      }
+    });
+
+    ref.afterClosed$.subscribe(res => {
+        console.log(res);
+    })
+
+  }
 }

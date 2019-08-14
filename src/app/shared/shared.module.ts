@@ -13,6 +13,9 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SpinnerOverlayComponent } from './components/spinner-overlay/spinner-overlay.component';
 import { SpinnerOverlayServiceService } from './components/spinner-overlay/spinner-overlay-service.service';
+import { PopoverComponent } from './components/popover/popover/popover.component';
+import { PopoverService } from './components/popover/popover.service';
+import { InsidePopoverComponent } from './components/popover/inside-popover/inside-popover.component';
 
 const publicAutocompleteApi = [
   AutocompleteComponent,
@@ -33,7 +36,7 @@ const publicAutocompleteApi = [
   FilterPipe,
     
   SpinnerComponent , 
-  SpinnerOverlayComponent],
+  SpinnerOverlayComponent, PopoverComponent, InsidePopoverComponent],
   exports: [
     CommonModule,
     FormsModule,
@@ -43,9 +46,10 @@ const publicAutocompleteApi = [
     publicAutocompleteApi,
     FilterPipe,
     SpinnerComponent , 
-    SpinnerOverlayComponent
+    SpinnerOverlayComponent , 
+    PopoverComponent, InsidePopoverComponent
   ],
-  providers: [SpinnerOverlayServiceService],
+  providers: [SpinnerOverlayServiceService , PopoverService],
   entryComponents:[]
 })
 export class SharedModule {}

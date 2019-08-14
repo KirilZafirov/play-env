@@ -4,7 +4,7 @@ export interface IConfiguration {
 
 export class EnvConfig implements IConfiguration {
     api: string;
-
+    
     constructor(config : IConfiguration) {
         Object.assign(this , config);
     }
