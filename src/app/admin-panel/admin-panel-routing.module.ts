@@ -1,10 +1,12 @@
-import { SettingsComponent } from './settings/settings.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
 
 
 const routes: Routes = [
-  { path: '', component: SettingsComponent , data: { title: 'Settings'}  }
+  { path: '', component: AdminComponent , data: { title: 'Admin'}  },
+  { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule) }
 ];
 
 @NgModule({
