@@ -11,5 +11,6 @@ export class AppComponent {
   constructor(private envConfig: EnvConfig) {
     console.log(this.envConfig);
   }
-
+  // name = 'Angular';
+  // ids: Array<String> = ['one', 'two', 'three', 'four']
 }

@@ -16,6 +16,7 @@ import { SpinnerOverlayServiceService } from './components/spinner-overlay/spinn
 import { PopoverComponent } from './components/popover/popover/popover.component';
 import { PopoverService } from './components/popover/popover.service';
 import { InsidePopoverComponent } from './components/popover/inside-popover/inside-popover.component';
+import { CountdownTimerComponent } from './components/countdown-timer/countdown-timer.component';
 
 const publicAutocompleteApi = [
   AutocompleteComponent,
@@ -36,7 +37,7 @@ const publicAutocompleteApi = [
   FilterPipe,
     
   SpinnerComponent , 
-  SpinnerOverlayComponent, PopoverComponent, InsidePopoverComponent],
+  SpinnerOverlayComponent, PopoverComponent, InsidePopoverComponent, CountdownTimerComponent],
   exports: [
     CommonModule,
     FormsModule,
@@ -47,7 +48,7 @@ const publicAutocompleteApi = [
     FilterPipe,
     SpinnerComponent , 
     SpinnerOverlayComponent , 
-    PopoverComponent, InsidePopoverComponent
+    PopoverComponent, InsidePopoverComponent , CountdownTimerComponent
   ],
   providers: [SpinnerOverlayServiceService , PopoverService],
   entryComponents:[]

@@ -7,9 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { EnvConfig } from './env-config/env-config.model';
-import { AutocompleteComponent } from './shared/autocomplete/autocomplete/autocomplete.component';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { SpinnerOverlayComponent } from './shared/components/spinner-overlay/spinner-overlay.component';
 import { PopoverComponent } from './shared/components/popover/popover/popover.component';
 
 
@@ -30,7 +27,6 @@ export function getEnvConfig() {
     CoreModule,
     SharedModule,
     AppRoutingModule,
-    DashboardModule,
   ],
   providers: [ { provide: EnvConfig, useFactory: getEnvConfig },],
   bootstrap: [AppComponent] , 

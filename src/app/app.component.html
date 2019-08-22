@@ -1,4 +1,6 @@
 <div [ngClass]="'alternative'">
+  
+<div class="mat-app-background">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
       <span>Material App</span>
@@ -7,7 +9,27 @@
       <mat-icon class="example-icon">delete</mat-icon>
     </mat-toolbar-row>
   </mat-toolbar>
-  
-</div>
 
+</div>
+<a routerLink="/dashboard" >Dashboard</a>
+<a routerLink='/admin' >Admin</a>
+<!-- <div class="links">
+  <ul>
+    <li *ngFor="let link of ids">
+      <a [routerLink]='"."' [fragment]="link">{{link}}</a>
+    </li>
+  </ul>
+</div>
+<section>
+  <div class="section" *ngFor="let link of ids" [attr.id]='link' >
+    <h1>{{link}}</h1>
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+      Incidunt saepe exercitationem praesentium modi repudiandae dicta consectetur ab veritatis quaerat quibusdam quod, 
+      dolorem fugit temporibus voluptas magni ad odio, adipisci doloremque!
+    </div>
+  </div>
+</section> -->
 <router-outlet></router-outlet>
+
+</div>

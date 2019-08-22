@@ -6,16 +6,18 @@ import { AutocompleteComponent } from '@app/shared/autocomplete/autocomplete/aut
 import { SpinnerOverlayComponent } from '@app/shared/components/spinner-overlay/spinner-overlay.component';
 import { PopoverComponent } from '@app/shared/components/popover/popover/popover.component';
 import { InsidePopoverComponent } from '@app/shared/components/popover/inside-popover/inside-popover.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
 @NgModule({
-  declarations: [DashboardRoutingModule.components],
+  declarations: [DashboardComponent],
   imports: [
+    DashboardRoutingModule ,
     SharedModule,
     CommonModule
   ],
   exports: [ ] ,
-  entryComponents:[DashboardRoutingModule.components , AutocompleteComponent, SpinnerOverlayComponent , PopoverComponent , InsidePopoverComponent]
+  entryComponents:[ AutocompleteComponent, SpinnerOverlayComponent , PopoverComponent , InsidePopoverComponent]
 })
 export class DashboardModule { }
