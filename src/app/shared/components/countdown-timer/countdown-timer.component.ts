@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, merge, timer, NEVER } from 'rxjs';
-import { CountdownStateService } from './countdown-timer.state';
-import { mapTo, sample, withLatestFrom, map, takeWhile, switchMap, share, filter } from 'rxjs/operators';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { CounterFacadeService } from './counter-facade-interface';
 
 @Component({
   selector: 'app-countdown-timer',
   templateUrl: './countdown-timer.component.html',
-  styleUrls: ['./countdown-timer.component.scss']
+  styleUrls: ['./countdown-timer.component.scss'] ,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CountdownTimerComponent implements OnInit {
 
-  constructor(private countDownState: CountdownStateService) { }
+  constructor(public facade: CounterFacadeService) { }
 
   ngOnInit() {
   

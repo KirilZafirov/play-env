@@ -1,0 +1,66 @@
+<h3> Counter Component</h3>
+
+
+<h4> Value : 0</h4>
+<h2>
+  <span id="{{elementIds.TimerDisplay}}">{{(state$ | async).count | toClockDisplay}}</span>
+</h2>
+<div>  
+
+<button mat-raised-button color="primary"
+ id="{{elementIds.BtnStart}}"
+ (click)="btnStart.next($event)">Start</button>
+<button mat-raised-button color="primary"
+id="{{elementIds.BtnPause}}"
+(click)="btnPause.next($event)">Pause</button>
+</div>
+<div>
+    <button mat-raised-button color="primary" 
+    id="{{elementIds.BtnSetTo}}"
+    (click)="btnSetTo.next($event)">Set To</button>
+    <mat-form-field class="example-full-width">
+        <!-- <span matPrefix>+1 &nbsp;</span> -->
+        <input type="number" 
+        id="{{elementIds.InputSetTo}}"
+        value="{{initialSetToValue$ | async}}"
+        (input)="inputSetTo.next($event)"
+        step="1"  min="0" matInput>
+        <mat-icon matSuffix>mode_edit</mat-icon>
+      </mat-form-field>
+</div>
+<div>
+    <button mat-raised-button color="primary"
+    id="{{elementIds.BtnReset}}"
+ (click)="btnReset.next($event)">Reset</button>
+    <button mat-raised-button color="warn"
+    id="{{elementIds.BtnDown}}"
+ (click)="btnDown.next($event)">Count Down</button>
+    <button mat-raised-button color="accent"
+    id="{{elementIds.BtnUp}}"
+ (click)="btnUp.next($event)">Count Up</button>
+    
+</div>
+
+<div>
+
+    <span mat-raised-button color="accent">Tick Speed</span>
+    <mat-form-field class="example-full-width">
+        <!-- <span matPrefix>+1 &nbsp;</span> -->
+        <input type="number" [step]="1"  min="0" matInput 
+        id="{{elementIds.InputTickSpeed}}"
+        (click)="inputTickSpeed.next($event)">
+        <mat-icon matSuffix>mode_edit</mat-icon>
+      </mat-form-field>
+     
+</div>
+
+<div>
+    <span mat-raised-button color="primary" >Count Diff</span>
+    <mat-form-field class="example-full-width">
+      <!-- <span matPrefix>+1 &nbsp;</span> -->
+      <input type="number" min="0" [step]="1" matInput
+      id="{{elementIds.InputCountDiff}}"
+      (click)="inputCountDiff.next($event)">
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+</div>

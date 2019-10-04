@@ -3,20 +3,88 @@
 @include mat-core();
 
 $mat-custom-purple: (
-  50: #FCF9FB,
-  100: #F9F1F5,
-  200: #F5E8EE,
-  300: #F0DFE7,
-  400: #EDD8E1,
-  500: #EAD1DC,
-  600: #E7CCD8,
-  700: #E4C6D3,
-  800: #E1C0CE,
-  900: #DBB5C5,
-  A100: #FFFFFF,
-  A200: #FFFFFF,
-  A400: #FFFFFF,
-  A700: #FFFFFF,
+  50   : #FFFFFF ,
+  100  : #CFE1F1 ,
+  200  : #A3C5E4 ,
+  300  : #6CA3D4 ,
+  400  : #5594CD ,
+  500  : #3D85C6 ,
+  600  : #3475B1 ,
+  700  : #2D6699 ,
+  800  : #265681 ,
+  900  : #1F466A ,
+  A100 : #FFFFFF ,
+  A200 : #A5D0F7 ,
+  A400 : #559FE1 ,
+  A700 : #4B92D1 ,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+
+$mat-custom-lime: (
+  50 :#FFFFFF ,
+  100:#FBF5D9 ,
+  200:#F5E8A7 ,
+  300:#EDD767 ,
+  400:#EAD04B ,
+  500:#E7C930 ,
+  600:#DFBE1A ,
+  700:#C3A717 ,
+  800:#A88F13 ,
+  900:rgb(18, 16, 6) ,
+  A10: #FFFFFF ,
+  A20: #FFF2B1 ,
+  A40: #FADE50 ,
+  A70: #EFD242,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+
+$mat-custom-red: (
+ 50  : #FFFFFF ,
+ 100 : #FCDFE0 ,
+ 200 : #F6ACAF ,
+ 300 : #F06B71 ,
+ 400 : #ED5057 ,
+ 500 : #EA343C ,
+ 600 : #E71821 ,
+ 700 : #CC151D ,
+ 800 : #B01219 ,
+ 900 : #940F15 ,
+ A100: #FFFFFF ,
+ A200: #FFB8BB ,
+ A400: #FC555C ,
+ A700: #F1464E,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -36,8 +104,8 @@ $mat-custom-purple: (
 );
 
 $custom-primary: mat-palette($mat-custom-purple, 600);
-$custom-accent:  mat-palette($mat-lime, 100);
-$custom-warn:    mat-palette($mat-red);
+$custom-accent:  mat-palette($mat-custom-lime, 100);
+$custom-warn:    mat-palette($mat-custom-red);
 
 
 
@@ -53,7 +121,7 @@ $custom-theme: mat-dark-theme($custom-primary, $custom-accent, $custom-warn);
 @include angular-material-theme($custom-theme);
 
 
-// ALTERNATIVE THEME
+// // ALTERNATIVE THEME
 
 $alt-primary: mat-palette($mat-yellow);
 $alt-accent:  mat-palette($mat-grey, 200);

@@ -1,10 +1,15 @@
-<div id="container">
-    <header>
-        <h1 id="timer">25: 00</h1>
-    </header>
-    <div id="buttons">
-        <button id="start" ><i class="fas fa-play"></i></button>
-        <button id="pause" ><i class="fas fa-pause"></i></button>
-        <button id="restart" ><i class="fas fa-undo-alt"></i></button>
-    </div>
-</div>
+<app-counter-view 
+    [state]="facade.counterState | async"
+    (btnStart)=" facade.btnStart.next($event)"
+    (btnPause)=" facade.btnPause.next($event)"
+    (btnSetTo)=" facade.btnSetTo.next($event)"
+    (inputSetTo) ="facade.inputSetTo.next($event)"
+    (btnUp) = "facade.btnUp.next($event)"
+    (btnDown) = "facade.btnDown.next($event)"
+    (inputTickSpeed) = "facade.inputTickSpeed.next($event)"
+    (inputCountDiff) = "facade.inputCountDiff.next($event)"
+    (btnReset) = "facade.btnReset.next($event)"
+    >
+
+</app-counter-view>
+

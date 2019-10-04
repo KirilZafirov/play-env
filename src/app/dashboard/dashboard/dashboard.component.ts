@@ -1,10 +1,13 @@
-import {Component, QueryList, ViewChildren, OnInit, TemplateRef} from '@angular/core';
+import { Component, QueryList, ViewChildren, OnInit, TemplateRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { FocusKeyManager, ActiveDescendantKeyManager } from '@angular/cdk/a11y';
-import { ENTER } from '@angular/cdk/keycodes';
+import { ENTER, A } from '@angular/cdk/keycodes';
 import { OptionComponent } from '@app/shared/autocomplete/option/option.component';
 import { PopoverService } from '@app/shared/components/popover/popover.service';
 import { InsidePopoverComponent } from '@app/shared/components/popover/inside-popover/inside-popover.component';
+import { of, Observable, pipe, combineLatest } from 'rxjs';
+import { mergeMap, map } from 'rxjs/operators';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -13,11 +16,11 @@ import { InsidePopoverComponent } from '@app/shared/components/popover/inside-po
 export class DashboardComponent implements OnInit {
 
   @ViewChildren(OptionComponent) items: QueryList<OptionComponent>;
- 
+
   constructor(private popper: PopoverService) {
   }
-
-  ngOnInit(){}
+   
+  ngOnInit() { }
 
   options = [
     { id: 1, label: 'One' },
@@ -63,7 +66,7 @@ export class DashboardComponent implements OnInit {
     });
 
     ref.afterClosed$.subscribe(res => {
-        console.log(res);
+      console.log(res);
     })
 
   }
