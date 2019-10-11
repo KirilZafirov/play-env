@@ -45,6 +45,12 @@ export class CounterViewComponent implements OnInit {
     map( s => s.count)
   );
 
+  isTicking$ = this.state$.pipe( 
+    map( s => s.isTicking)
+  );
+  countUp$ = this.state$.pipe(
+    map( s => s.countUp)
+  )
   constructor() { }
 
   ngOnInit() {

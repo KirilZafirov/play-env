@@ -1,12 +1,20 @@
 import { Component, QueryList, ViewChildren, OnInit, TemplateRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { FocusKeyManager, ActiveDescendantKeyManager } from '@angular/cdk/a11y';
+import { ActiveDescendantKeyManager } from '@angular/cdk/a11y';
 import { ENTER, A } from '@angular/cdk/keycodes';
 import { OptionComponent } from '@app/shared/autocomplete/option/option.component';
 import { PopoverService } from '@app/shared/components/popover/popover.service';
-import { InsidePopoverComponent } from '@app/shared/components/popover/inside-popover/inside-popover.component';
-import { of, Observable, pipe, combineLatest } from 'rxjs';
-import { mergeMap, map } from 'rxjs/operators';
+
+
+export enum Literals {
+  I  =  1 ,
+  V  =  5,
+  X  =  10,
+  L  =  50,
+  C  =  100,
+  D  =  500,
+  M  =  1000,
+}
 
 @Component({
   selector: 'app-dashboard',
@@ -20,8 +28,11 @@ export class DashboardComponent implements OnInit {
   constructor(private popper: PopoverService) {
   }
    
-  ngOnInit() { }
-
+  ngOnInit() {  
+  
+    debugger;
+  }
+ 
   options = [
     { id: 1, label: 'One' },
     { id: 2, label: 'Two' },

@@ -9,10 +9,12 @@
 
 <button mat-raised-button color="primary"
  id="{{elementIds.BtnStart}}"
- (click)="btnStart.next($event)">Start</button>
+ (click)="btnStart.next($event)"
+ *ngIf="!(isTicking$ | async)">Start</button>
 <button mat-raised-button color="primary"
 id="{{elementIds.BtnPause}}"
-(click)="btnPause.next($event)">Pause</button>
+(click)="btnPause.next($event)"
+*ngIf="isTicking$ | async">Pause</button>
 </div>
 <div>
     <button mat-raised-button color="primary" 
@@ -31,13 +33,15 @@ id="{{elementIds.BtnPause}}"
 <div>
     <button mat-raised-button color="primary"
     id="{{elementIds.BtnReset}}"
- (click)="btnReset.next($event)">Reset</button>
+    (click)="btnReset.next($event)">Reset</button>
     <button mat-raised-button color="warn"
     id="{{elementIds.BtnDown}}"
- (click)="btnDown.next($event)">Count Down</button>
+    (click)="btnDown.next($event)"
+    *ngIf="countUp$ | async">Count Down</button>
     <button mat-raised-button color="accent"
     id="{{elementIds.BtnUp}}"
- (click)="btnUp.next($event)">Count Up</button>
+    (click)="btnUp.next($event)"
+    *ngIf="!(countUp$ | async)">Count Up</button>
     
 </div>
 
