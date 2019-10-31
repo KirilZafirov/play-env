@@ -1,0 +1,35 @@
+
+  <form novalidate
+  [formGroup]="customerForm">
+
+<div class="form-group row mb-2">
+<label class="col-md-2 col-form-label"
+       for="celsius">celsius</label>
+<div class="col-md-8">
+  <input class="form-control"
+         id="celsius"
+         type="number"
+         placeholder="celsius (required)"
+         [formControl]="customerForm.get('celsius')"
+         />
+
+</div>
+</div>
+
+<div class="form-group row mb-2">
+<label class="col-md-2 col-form-label"
+       for="fahrenheitId">fahrenheit</label>
+<div class="col-md-8">
+  <input class="form-control"
+         id="fahrenheitId"
+         type="number"
+         placeholder="Last Name (required)"
+         [formControl]="customerForm.get('fahrenheit')"/>
+</div>
+</div>
+
+
+
+
+
+</form>

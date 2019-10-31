@@ -7,11 +7,12 @@ import { SpinnerOverlayComponent } from '@app/shared/components/spinner-overlay/
 import { PopoverComponent } from '@app/shared/components/popover/popover/popover.component';
 import { InsidePopoverComponent } from '@app/shared/components/popover/inside-popover/inside-popover.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TemperatureConverterComponent } from './temperature-convertor/temperature-convertor';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent , TemperatureConverterComponent ],
   imports: [
     DashboardRoutingModule ,
     SharedModule,
