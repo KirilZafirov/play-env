@@ -8,11 +8,13 @@ import { PopoverComponent } from '@app/shared/components/popover/popover/popover
 import { InsidePopoverComponent } from '@app/shared/components/popover/inside-popover/inside-popover.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TemperatureConverterComponent } from './temperature-convertor/temperature-convertor';
+import { ChildOneComponent } from './dashboard/child-one.component';
+import { ChildTwoComponent } from './dashboard/child-two.component';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent , TemperatureConverterComponent ],
+  declarations: [DashboardComponent , TemperatureConverterComponent , ChildOneComponent  , ChildTwoComponent],
   imports: [
     DashboardRoutingModule ,
     SharedModule,

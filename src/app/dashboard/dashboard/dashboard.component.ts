@@ -34,11 +34,6 @@ export class DashboardComponent implements OnInit {
       celsius: [null, [Validators.required]],
       fahrenheit: [null, [Validators.required]]
     });
-    let entry = 'RBRGBRBGGRRRBGBBBGG';
-    let expecting = 'G';
-    let result = this.triangle(entry);
-  
-    debugger;
   }
  
 
