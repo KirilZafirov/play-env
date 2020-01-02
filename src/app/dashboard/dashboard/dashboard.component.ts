@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit , AfterViewInit {
   private keyManager: ActiveDescendantKeyManager<OptionComponent>;
   control = new FormControl();
   model = '';
-  constructor(private popper: PopoverService , private fb: FormBuilder) {
+  constructor(private popper: PopoverService) {
   }
 
   ngOnInit() {

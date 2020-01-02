@@ -1,5 +1,5 @@
-import { BrowserModule, Title } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule, Title, Meta } from '@angular/platform-browser';
+import { NgModule} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,7 +13,12 @@ import { PopoverComponent } from './shared/components/popover/popover/popover.co
 export function getEnvConfig() {
   return new EnvConfig((window as any).EnvConfig);
 }
+export function runOnBootstrap() {
+  return ;
+}
+export function runSettingsOnInit() {
 
+}
 @NgModule({
   declarations: [
     AppComponent
@@ -29,8 +34,18 @@ export function getEnvConfig() {
     AppRoutingModule,
   ],
   providers: [
+    // { provide: APP_INITIALIZER, useFactory: runSettingsOnInit , multi: true },
+      // Bootstrap Listener
+    // Just like AppInitializer, 
+    // Angular has a feature that enables us to listen on when a component is being bootstrapped. 
+    // It is the APP_BOOTSTRAP_LISTENER.
+    // {
+    //   provide: APP_BOOTSTRAP_LISTENER, multi: true,
+    //   useExisting: runOnBootstrap
+    // } ,
     { provide: EnvConfig, useFactory: getEnvConfig },
-    Title
+    Title,
+    Meta,
   ],
   bootstrap: [AppComponent] ,
   entryComponents: [PopoverComponent]

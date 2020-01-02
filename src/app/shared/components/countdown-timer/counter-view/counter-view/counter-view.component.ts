@@ -13,7 +13,7 @@ import { map, first } from 'rxjs/operators';
 export class CounterViewComponent implements OnInit {
   elementIds = ElementIds;
 
-  private stateSubject : ReplaySubject<CounterState> = new ReplaySubject<CounterState>(1);
+  private stateSubject: ReplaySubject<CounterState> = new ReplaySubject<CounterState>(1);
   state$ = this.stateSubject.asObservable();
 
   @Input()
@@ -39,22 +39,22 @@ export class CounterViewComponent implements OnInit {
   inputCountDiff = new EventEmitter<Event>();
   @Output()
   inputSetTo = new EventEmitter<Event>();
- 
+
   initialSetToValue$ = this.state$.pipe(
     first(),
     map( s => s.count)
   );
 
-  isTicking$ = this.state$.pipe( 
+  isTicking$ = this.state$.pipe(
     map( s => s.isTicking)
   );
   countUp$ = this.state$.pipe(
     map( s => s.countUp)
-  )
+  );
   constructor() { }
 
   ngOnInit() {
-  
+
   }
 
 }

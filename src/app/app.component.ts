@@ -1,8 +1,9 @@
-import { Title } from '@angular/platform-browser';
-import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
+import { Component, OnInit, Inject } from '@angular/core';
 import { EnvConfig } from './env-config/env-config.model';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
+import { DOCUMENT } from '@angular/common';
 
 
 @Component({
@@ -16,12 +17,18 @@ export class AppComponent implements OnInit {
   constructor(private envConfig: EnvConfig ,
               private router: Router,
               private activatedRoute: ActivatedRoute,
-              private titleService: Title) {
+              private titleService: Title,
+              private meta: Meta,
+              @Inject(DOCUMENT) documentRef: Document) {
     console.log(this.envConfig);
   }
   ngOnInit(): void {
     const appTitle = this.titleService.getTitle();
-    
+
+    // this.meta.updateTag({name: 'dashboard', content: ''});
+    // this.meta.updateTag({name: 'description', content: 'Lorem ipsum dolor'});
+    // this.meta.updateTag({name: 'site', content: 'My Site'});
+
     this.router
       .events.pipe(
         filter(event => event instanceof NavigationEnd),

@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SettingsComponent } from './settings.component';
 
 const routes: Routes = [{ path: '', component: SettingsComponent ,   data: { title: 'Settings'} },
-{ path: 'theme-settings', loadChildren: 
+{ path: 'theme-settings', loadChildren:
        () => import('app/admin-panel/settings/theme-settings/theme-settings.module')
        .then(m => m.ThemeSettingsModule) },
 { path: 'dashboard-settings', loadChildren:

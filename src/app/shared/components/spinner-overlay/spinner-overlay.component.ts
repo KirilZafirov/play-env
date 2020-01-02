@@ -8,7 +8,7 @@ import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core
 })
 export class SpinnerOverlayComponent implements OnInit {
   @Input() public message: string;
-  
+
   constructor() { }
 
   ngOnInit() {
