@@ -1,4 +1,4 @@
-import { Component, QueryList, ViewChildren, OnInit, TemplateRef, AfterViewInit } from '@angular/core';
+import { Component, QueryList, ViewChildren, OnInit, TemplateRef, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl , FormBuilder } from '@angular/forms';
 import { ActiveDescendantKeyManager } from '@angular/cdk/a11y';
 import { ENTER, A } from '@angular/cdk/keycodes';
@@ -14,7 +14,8 @@ export interface Operator {
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent implements OnInit , AfterViewInit {
 

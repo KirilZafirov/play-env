@@ -3,14 +3,14 @@
   <mat-toolbar color="primary">
     <mat-toolbar-row>
       <span>Material App</span>
-      <button mat-button [matMenuTriggerFor]="aboveMenu" routerLink="/dashboard"  >
+      <button mat-button routerLink="/dashboard"  >
          Dashboard 
       </button> 
       <span class="example-spacer"></span>
-      <button mat-button [matMenuTriggerFor]="belowMenu" routerLink='/admin/settings'  >
+      <button mat-button [matMenuTriggerFor]="settingsMenu" routerLink='/admin/settings'  >
          Settings 
       </button>
-      <mat-menu #belowMenu="matMenu" yPosition="below" role="menuitem">
+      <mat-menu #settingsMenu="matMenu" yPosition="below" role="menuitem">
         <button mat-menu-item routerLink='/admin/settings/theme-settings' > 
            Theme - Settings 
         </button>
@@ -19,7 +19,7 @@
         </button>
       </mat-menu>
        
-      <button mat-button [matMenuTriggerFor]="aboveMenu" routerLink='/admin'>
+      <button mat-button routerLink='/admin'>
          Admin 
       </button>
       <mat-icon class="example-icon">favorite</mat-icon>

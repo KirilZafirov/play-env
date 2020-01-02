@@ -7,7 +7,7 @@ import { map, first } from 'rxjs/operators';
 @Component({
   selector: 'app-counter-view',
   templateUrl: './counter-view.component.html',
-  styleUrls: ['./counter-view.component.scss'] , 
+  styleUrls: ['./counter-view.component.scss'] ,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CounterViewComponent implements OnInit {

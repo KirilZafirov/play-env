@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-theme-settings',
   templateUrl: './theme-settings.component.html',
-  styleUrls: ['./theme-settings.component.scss']
+  styleUrls: ['./theme-settings.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThemeSettingsComponent implements OnInit {
 
