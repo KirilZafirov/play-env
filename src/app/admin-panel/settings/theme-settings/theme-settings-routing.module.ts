@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ThemeSettingsComponent } from './theme-settings.component';
 
-const routes: Routes = [{ path: '', component: ThemeSettingsComponent }];
+const routes: Routes = [{ path: '', component: ThemeSettingsComponent , data: { title: 'Theme Settings'} }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

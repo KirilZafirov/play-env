@@ -1,40 +1,30 @@
-<div [ngClass]="'alternative'">
-  <div>
+<!-- <div [ngClass]="'alternative'">  -->
 <div class="mat-app-background">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
       <span>Material App</span>
+      <button mat-button [matMenuTriggerFor]="aboveMenu" routerLink="/dashboard"  >
+         Dashboard 
+      </button> 
       <span class="example-spacer"></span>
+      <button mat-button [matMenuTriggerFor]="belowMenu" routerLink='/admin/settings'  >
+         Settings 
+      </button>
+      <mat-menu #belowMenu="matMenu" yPosition="below" role="menuitem">
+        <button mat-menu-item routerLink='/admin/settings/theme-settings' > 
+           Theme - Settings 
+        </button>
+        <button mat-menu-item routerLink='/admin/settings/dashboard-settings'>
+          Dashboard - Settings 
+        </button>
+      </mat-menu>
+       
+      <button mat-button [matMenuTriggerFor]="aboveMenu" routerLink='/admin'>
+         Admin 
+      </button>
       <mat-icon class="example-icon">favorite</mat-icon>
       <mat-icon class="example-icon">delete</mat-icon>
     </mat-toolbar-row>
-  </mat-toolbar>
-
-</div>
-<a routerLink="/dashboard" >Dashboard</a>
-<a routerLink='/admin' >Admin</a>
-<a routerLink='/admin/settings' >Settings</a>
-<a routerLink='/admin/settings/theme-settings' >Theme - Settings</a>
-<a routerLink='/admin/settings/dashboard-settings' >Dashboard - Settings</a>
-
-<!-- 
-<div class="links">
-  <ul>
-    <li *ngFor="let link of ids">
-      <a [routerLink]='"."' [fragment]="link">{{link}}</a>
-    </li>
-  </ul>
-</div>
-<section>
-  <div class="section" *ngFor="let link of ids" [attr.id]='link' >
-    <h1>{{link}}</h1>
-    <div class="content">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-      Incidunt saepe exercitationem praesentium modi repudiandae dicta consectetur ab veritatis quaerat quibusdam quod, 
-      dolorem fugit temporibus voluptas magni ad odio, adipisci doloremque!
-    </div>
-  </div>
-</section>  -->
-<router-outlet></router-outlet>
-
-</div>
+  </mat-toolbar> 
+<router-outlet></router-outlet> 
+</div> 

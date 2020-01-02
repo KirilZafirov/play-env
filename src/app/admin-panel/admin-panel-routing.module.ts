@@ -5,7 +5,7 @@ import { AdminComponent } from './admin/admin.component';
 
 
 const routes: Routes = [
-  { path: '', component: AdminComponent , data: { title: 'Admin'}  },
+  { path: '', component: AdminComponent , data: { title: 'Admin Section'}  },
   { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule) }
 ];
 

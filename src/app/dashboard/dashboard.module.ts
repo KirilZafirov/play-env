@@ -6,14 +6,12 @@ import { AutocompleteComponent } from '@app/shared/autocomplete/autocomplete/aut
 import { SpinnerOverlayComponent } from '@app/shared/components/spinner-overlay/spinner-overlay.component';
 import { PopoverComponent } from '@app/shared/components/popover/popover/popover.component';
 import { InsidePopoverComponent } from '@app/shared/components/popover/inside-popover/inside-popover.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ChildOneComponent } from './dashboard/child-one.component';
-import { ChildTwoComponent } from './dashboard/child-two.component';
+import { DashboardComponent } from './dashboard/dashboard.component'; 
 
 
 
 @NgModule({
-  declarations: [DashboardComponent , ChildOneComponent  , ChildTwoComponent],
+  declarations: [DashboardComponent ],
   imports: [
     DashboardRoutingModule ,
     SharedModule,

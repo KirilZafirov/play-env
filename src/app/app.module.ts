@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -28,7 +28,10 @@ export function getEnvConfig() {
     SharedModule,
     AppRoutingModule,
   ],
-  providers: [ { provide: EnvConfig, useFactory: getEnvConfig }, ],
+  providers: [
+    { provide: EnvConfig, useFactory: getEnvConfig },
+    Title
+  ],
   bootstrap: [AppComponent] ,
   entryComponents: [PopoverComponent]
 })
