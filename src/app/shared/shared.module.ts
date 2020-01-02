@@ -21,6 +21,7 @@ import { CounterViewComponent } from './components/countdown-timer/counter-view/
 import { InputToValuePipe } from './components/countdown-timer/input-to-value.pipe';
 import { CounterFacadeService } from './components/countdown-timer/counter-facade-interface';
 import { ToClockDisplayPipe } from './components/countdown-timer/clock.pipe';
+import { TemperatureConverterComponent } from './components/temperature-convertor/temperature-convertor.component';
 
 const publicAutocompleteApi = [
   AutocompleteComponent,
@@ -33,34 +34,37 @@ const publicAutocompleteApi = [
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule ,
     MaterialModule
   ],
   declarations: [
     publicAutocompleteApi ,
     InputToValuePipe ,
     FilterPipe,
-    ToClockDisplayPipe, 
-    SpinnerComponent , 
-    SpinnerOverlayComponent, 
-    PopoverComponent, 
-    InsidePopoverComponent, 
-    CountdownTimerComponent , 
-    CounterViewComponent],
+    ToClockDisplayPipe,
+    SpinnerComponent ,
+    SpinnerOverlayComponent,
+    PopoverComponent,
+    InsidePopoverComponent,
+    CountdownTimerComponent ,
+    CounterViewComponent ,
+    TemperatureConverterComponent],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    FlexLayoutModule , 
+    FlexLayoutModule ,
     publicAutocompleteApi,
     FilterPipe,
-    SpinnerComponent , 
-    SpinnerOverlayComponent , 
+    SpinnerComponent ,
+    SpinnerOverlayComponent ,
     PopoverComponent, InsidePopoverComponent , CountdownTimerComponent , CounterViewComponent ,
-    InputToValuePipe , 
+    InputToValuePipe ,
     ToClockDisplayPipe ,
+    TemperatureConverterComponent
   ],
   providers: [SpinnerOverlayServiceService , PopoverService , CounterFacadeService],
-  entryComponents:[]
+  entryComponents: []
 })
 export class SharedModule {}

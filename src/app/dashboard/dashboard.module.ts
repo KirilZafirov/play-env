@@ -7,20 +7,19 @@ import { SpinnerOverlayComponent } from '@app/shared/components/spinner-overlay/
 import { PopoverComponent } from '@app/shared/components/popover/popover/popover.component';
 import { InsidePopoverComponent } from '@app/shared/components/popover/inside-popover/inside-popover.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { TemperatureConverterComponent } from './temperature-convertor/temperature-convertor';
 import { ChildOneComponent } from './dashboard/child-one.component';
 import { ChildTwoComponent } from './dashboard/child-two.component';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent , TemperatureConverterComponent , ChildOneComponent  , ChildTwoComponent],
+  declarations: [DashboardComponent , ChildOneComponent  , ChildTwoComponent],
   imports: [
     DashboardRoutingModule ,
     SharedModule,
     CommonModule
   ],
   exports: [ ] ,
-  entryComponents:[ AutocompleteComponent, SpinnerOverlayComponent , PopoverComponent , InsidePopoverComponent]
+  entryComponents: [ AutocompleteComponent, SpinnerOverlayComponent , PopoverComponent , InsidePopoverComponent]
 })
 export class DashboardModule { }

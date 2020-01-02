@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { debounceTime, map } from 'rxjs/operators';
 
 export interface Operator {
-  sign: string; 
+  sign: string;
   position: number;
   priority: number;
 }
@@ -18,28 +18,27 @@ export class TemperatureConverterComponent implements OnInit {
   constructor( private fb: FormBuilder) {
   }
   customerForm: FormGroup;
-  celsius : Observable<number>;
-  fahrenheit : Observable<number>;
+  celsius: Observable<number>;
+  fahrenheit: Observable<number>;
 
-  ngOnInit() {  
-    
+  ngOnInit() {
+
     this.customerForm = this.fb.group({
       celsius: [null, [Validators.required]],
       fahrenheit: [null, [Validators.required]]
     });
-    this.customerForm.get("celsius").valueChanges.pipe(
+    this.customerForm.get('celsius').valueChanges.pipe(
       debounceTime(300) ,
-      map( value => (value * 1.8) + 32) 
+      map( value => (value * 1.8) + 32)
     ).subscribe( val => {
-      this.customerForm.get("fahrenheit").patchValue(val, {emitEvent: false})
-    })
+      this.customerForm.get('fahrenheit').patchValue(val, {emitEvent: false});
+    });
 
-    this.customerForm.get("fahrenheit").valueChanges.pipe(
+    this.customerForm.get('fahrenheit').valueChanges.pipe(
       debounceTime(300) ,
-      map( value => (value - 32) / 1.8 ) 
+      map( value => (value - 32) / 1.8 )
     ).subscribe( val => {
-      this.customerForm.get("celsius").patchValue(val, {emitEvent: false})
-    })
+      this.customerForm.get('celsius').patchValue(val, {emitEvent: false});
+    });
   }
-  
 }

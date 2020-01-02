@@ -28,8 +28,8 @@ export function getEnvConfig() {
     SharedModule,
     AppRoutingModule,
   ],
-  providers: [ { provide: EnvConfig, useFactory: getEnvConfig },],
-  bootstrap: [AppComponent] , 
-  entryComponents:[PopoverComponent]
+  providers: [ { provide: EnvConfig, useFactory: getEnvConfig }, ],
+  bootstrap: [AppComponent] ,
+  entryComponents: [PopoverComponent]
 })
 export class AppModule { }
