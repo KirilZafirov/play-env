@@ -22,6 +22,7 @@ import { InputToValuePipe } from './components/countdown-timer/input-to-value.pi
 import { CounterFacadeService } from './components/countdown-timer/counter-facade-interface';
 import { ToClockDisplayPipe } from './components/countdown-timer/clock.pipe';
 import { TemperatureConverterComponent } from './components/temperature-convertor/temperature-convertor.component';
+import { ExampleDynamicComponent } from './components/dynamic-components/example-dynamic/example-dynamic.component';
 
 const publicAutocompleteApi = [
   AutocompleteComponent,
@@ -48,7 +49,8 @@ const publicAutocompleteApi = [
     InsidePopoverComponent,
     CountdownTimerComponent ,
     CounterViewComponent ,
-    TemperatureConverterComponent],
+    TemperatureConverterComponent,
+    ExampleDynamicComponent],
   exports: [
     CommonModule,
     FormsModule,
@@ -62,7 +64,8 @@ const publicAutocompleteApi = [
     PopoverComponent, InsidePopoverComponent , CountdownTimerComponent , CounterViewComponent ,
     InputToValuePipe ,
     ToClockDisplayPipe ,
-    TemperatureConverterComponent
+    TemperatureConverterComponent,
+    ExampleDynamicComponent
   ],
   providers: [SpinnerOverlayServiceService , PopoverService , CounterFacadeService],
   entryComponents: []
