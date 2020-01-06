@@ -27,7 +27,8 @@ import { DynamicSelectComponent } from './dynamic-components/template-outlet/sel
 import { ClientOneComponent } from './dynamic-components/template-outlet/client-1/client-one.component';
 import { ClientTwoComponent } from './dynamic-components/template-outlet/client-2/client-two.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown'; 
+import { AccordionModule } from './dynamic-components/accordion/accordion.module';
 
 const publicAutocompleteApi = [
   AutocompleteComponent,
@@ -36,6 +37,23 @@ const publicAutocompleteApi = [
   OptionComponent
 ];
 
+export const declarations = [
+  publicAutocompleteApi ,
+  InputToValuePipe ,
+  FilterPipe,
+  ToClockDisplayPipe,
+  SpinnerComponent ,
+  SpinnerOverlayComponent,
+  PopoverComponent,
+  InsidePopoverComponent,
+  CountdownTimerComponent ,
+  CounterViewComponent ,
+  TemperatureConverterComponent,
+  ExampleDynamicComponent ,
+  DynamicSelectComponent,
+  ClientOneComponent ,
+  ClientTwoComponent ];
+
 @NgModule({
   imports: [
     CommonModule,
@@ -43,42 +61,20 @@ const publicAutocompleteApi = [
     ReactiveFormsModule ,
     MaterialModule,
     AngularFontAwesomeModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot() ,
+    AccordionModule
   ],
-  declarations: [
-    publicAutocompleteApi ,
-    InputToValuePipe ,
-    FilterPipe,
-    ToClockDisplayPipe,
-    SpinnerComponent ,
-    SpinnerOverlayComponent,
-    PopoverComponent,
-    InsidePopoverComponent,
-    CountdownTimerComponent ,
-    CounterViewComponent ,
-    TemperatureConverterComponent,
-    ExampleDynamicComponent ,
-    DynamicSelectComponent,
-    ClientOneComponent ,
-    ClientTwoComponent],
+  declarations: [...declarations],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
     FlexLayoutModule ,
-    publicAutocompleteApi,
-    FilterPipe,
-    SpinnerComponent ,
-    SpinnerOverlayComponent ,
-    PopoverComponent, InsidePopoverComponent , CountdownTimerComponent , CounterViewComponent ,
-    InputToValuePipe ,
-    ToClockDisplayPipe ,
-    TemperatureConverterComponent,
-    ExampleDynamicComponent ,
-    DynamicSelectComponent,
-    ClientOneComponent ,
-    ClientTwoComponent
+    AngularFontAwesomeModule,
+    BsDropdownModule,
+    declarations ,
+    AccordionModule
   ],
   providers: [SpinnerOverlayServiceService , PopoverService , CounterFacadeService],
   entryComponents: []

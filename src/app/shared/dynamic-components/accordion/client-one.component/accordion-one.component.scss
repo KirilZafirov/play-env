@@ -1,0 +1,24 @@
+$header-height: 20px;
+$content-height: 50px;
+.accordion-item {
+  height: $header-height;
+  padding: 10px 15px;
+  overflow: hidden;
+  background: #eeeeee;
+  border-bottom: solid #484848;
+  transition: all .3s;
+  &:hover {
+    background-color: #ccc;
+  }
+  &.open {
+    height: $header-height + $content-height;
+    overflow: auto;
+  }
+  .item-header {
+    height: $content-height;
+    cursor: pointer;
+  }
+  .item-content {
+    display: block;
+  }
+}

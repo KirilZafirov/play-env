@@ -1,0 +1,54 @@
+$midnight: #2c3e50;
+$clouds: #ecf0f1;
+.accordion-item {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  transition: all .35s;
+  height: 50px;
+
+  &-label {
+    display: flex;
+    //justify-content: space-between;
+    padding: 1em;
+    background: $midnight;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.35s;
+    /* Icon */
+    &:hover {
+      background: darken($midnight, 10%);
+    }
+    &::before {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+    }
+  }
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: $midnight;
+    background: white;
+  }
+  &.open {
+    height: 100px;
+  }
+}
+
+// :checked
+.accordion-item.open {
+  .accordion-item-label {
+    background: darken($midnight, 10%);
+    color: darken($clouds, 10%);
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .accordion-item-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+}

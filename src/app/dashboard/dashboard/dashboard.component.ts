@@ -23,6 +23,14 @@ export class DashboardComponent implements OnInit , AfterViewInit {
   private keyManager: ActiveDescendantKeyManager<OptionComponent>;
   control = new FormControl();
   model = '';
+
+  title          = 'relational-accordion';
+  accordionItems = [
+    {header: 'itay', content: 'content'},
+    {header: 'noaa', content: 'content'},
+    {header: 'eliran', content: 'content'}
+  ];
+
   constructor(private popper: PopoverService) {
   }
 
