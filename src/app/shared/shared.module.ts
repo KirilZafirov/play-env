@@ -21,8 +21,13 @@ import { CounterViewComponent } from './components/countdown-timer/counter-view/
 import { InputToValuePipe } from './components/countdown-timer/input-to-value.pipe';
 import { CounterFacadeService } from './components/countdown-timer/counter-facade-interface';
 import { ToClockDisplayPipe } from './components/countdown-timer/clock.pipe';
-import { TemperatureConverterComponent } from './components/temperature-convertor/temperature-convertor.component';
-import { ExampleDynamicComponent } from './components/dynamic-components/example-dynamic/example-dynamic.component';
+import { TemperatureConverterComponent } from './components/temperature-convertor/temperature-convertor.component'; 
+import { ExampleDynamicComponent } from './dynamic-components/example-dynamic/example-dynamic.component';
+import { DynamicSelectComponent } from './dynamic-components/template-outlet/select.component';
+import { ClientOneComponent } from './dynamic-components/template-outlet/client-1/client-one.component';
+import { ClientTwoComponent } from './dynamic-components/template-outlet/client-2/client-two.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 const publicAutocompleteApi = [
   AutocompleteComponent,
@@ -36,7 +41,9 @@ const publicAutocompleteApi = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule ,
-    MaterialModule
+    MaterialModule,
+    AngularFontAwesomeModule,
+    BsDropdownModule.forRoot()
   ],
   declarations: [
     publicAutocompleteApi ,
@@ -50,7 +57,10 @@ const publicAutocompleteApi = [
     CountdownTimerComponent ,
     CounterViewComponent ,
     TemperatureConverterComponent,
-    ExampleDynamicComponent],
+    ExampleDynamicComponent ,
+    DynamicSelectComponent,
+    ClientOneComponent ,
+    ClientTwoComponent],
   exports: [
     CommonModule,
     FormsModule,
@@ -65,7 +75,10 @@ const publicAutocompleteApi = [
     InputToValuePipe ,
     ToClockDisplayPipe ,
     TemperatureConverterComponent,
-    ExampleDynamicComponent
+    ExampleDynamicComponent ,
+    DynamicSelectComponent,
+    ClientOneComponent ,
+    ClientTwoComponent
   ],
   providers: [SpinnerOverlayServiceService , PopoverService , CounterFacadeService],
   entryComponents: []
