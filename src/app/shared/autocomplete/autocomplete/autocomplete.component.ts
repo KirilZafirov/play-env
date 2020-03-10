@@ -11,9 +11,9 @@ import { merge } from 'rxjs';
   exportAs: 'appAutocomplete',
 })
 export class AutocompleteComponent implements OnInit {
-  @ViewChild('root', {static: false}) rootTemplate: TemplateRef<any>;
+  @ViewChild('root') rootTemplate: TemplateRef<any>;
   
-  @ContentChild(AutocompleteContentDirective,{static:false})
+  @ContentChild(AutocompleteContentDirective)
   content: AutocompleteContentDirective;
 
   @ContentChildren(OptionComponent ) options: QueryList<OptionComponent>;

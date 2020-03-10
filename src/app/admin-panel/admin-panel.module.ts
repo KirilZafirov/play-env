@@ -17,6 +17,6 @@ import { WebWorkerExampleComponent } from './admin/web-worker-example/web-worker
     SharedModule
   ],
   exports : [] ,
-  entryComponents:[]
+  // entryComponents:[]
 })
 export class AdminPanelModule { }

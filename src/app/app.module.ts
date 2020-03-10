@@ -1,13 +1,13 @@
-import { BrowserModule, Title, Meta } from '@angular/platform-browser';
-import { NgModule} from '@angular/core';
-
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppComponent } from './app.component'; 
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { EnvConfig } from './env-config/env-config.model';
-import { PopoverComponent } from './shared/components/popover/popover/popover.component';
+// import { PopoverComponent } from './shared/components/popover/popover/popover.component';
+import { BrowserModule, Title, Meta } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 
 export function getEnvConfig() {
@@ -48,6 +48,6 @@ export function runSettingsOnInit() {
     Meta,
   ],
   bootstrap: [AppComponent] ,
-  entryComponents: [PopoverComponent]
+  // entryComponents: [PopoverComponent]
 })
 export class AppModule { }

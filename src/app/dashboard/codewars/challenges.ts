@@ -333,7 +333,7 @@ export function* factorialSeq() {
     n++;
     yield total;
   }
-}
+} 
 
 export function* fibonacciSeq() {
   let previous = 0 ;
