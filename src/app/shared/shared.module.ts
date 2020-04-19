@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { OptionComponent } from './autocomplete/option/option.component';
@@ -29,6 +27,8 @@ import { ClientTwoComponent } from './dynamic-components/template-outlet/client-
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown'; 
 import { AccordionModule } from './dynamic-components/accordion/accordion.module';
+import { BarchartComponent } from './components/barchart/barchart.component';
+import { BarchartShellComponent } from './components/barchart/barchart-shell.component';
 
 const publicAutocompleteApi = [
   AutocompleteComponent,
@@ -52,7 +52,9 @@ export const declarations = [
   ExampleDynamicComponent ,
   DynamicSelectComponent,
   ClientOneComponent ,
-  ClientTwoComponent ];
+  ClientTwoComponent ,
+  BarchartComponent,
+  BarchartShellComponent];
 
 @NgModule({
   imports: [

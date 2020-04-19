@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "play-env"
+    }
+  },
+  "defaultProject": "play-env",
+  "cli": {
+    "analytics": false
+  }
 }
