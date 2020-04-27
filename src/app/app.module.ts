@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { EnvConfig } from './env-config/env-config.model';
 import { PopoverComponent } from './shared/components/popover/popover/popover.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 
 export function getEnvConfig() {
@@ -21,7 +22,8 @@ export function runSettingsOnInit() {
 }
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BreadcrumbComponent
   ],
   imports: [
     // angular

@@ -5,9 +5,21 @@ import { AdminComponent } from './admin/admin.component';
 
 
 const routes: Routes = [
-  { path: '', component: AdminComponent , data: { title: 'Admin Section'}  },
+  { path: '', component: AdminComponent , data: { 
+    title: 'Admin Section',
+    breadcrumb: [ 
+      {
+        label: 'Admin Section',
+        url: '/admin'
+      }
+    ]
+  },
+},
   { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule) }
 ];
+
+
+
 
 @NgModule({
   imports: [ RouterModule.forChild(routes) ],

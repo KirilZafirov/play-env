@@ -3,7 +3,21 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SettingsComponent } from './settings.component';
 
-const routes: Routes = [{ path: '', component: SettingsComponent ,   data: { title: 'Settings'} },
+const routes: Routes = [{ path: '', component: SettingsComponent , 
+       data: { 
+              title: 'Settings',
+              breadcrumb: [ 
+              {
+              label: 'Admin Section',
+              url: '/admin'
+              },
+              {
+              label: 'Settings',
+              url: '/admin/settings'
+              }
+              ]
+       }, 
+       },
 { path: 'theme-settings', loadChildren:
        () => import('app/admin-panel/settings/theme-settings/theme-settings.module')
        .then(m => m.ThemeSettingsModule) },

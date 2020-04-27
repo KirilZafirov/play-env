@@ -1,0 +1,38 @@
+// .mat-bread-crumb {
+//     height: 30px;
+//     background-color: rgb(241, 239, 235);
+//   }
+//   .mat-bread-crumb-list{
+//     padding-bottom: 10px;
+    
+//   }
+//   .mat-bread-crumb-list-item{
+//     font-size: 15px;
+//   }
+
+//   .mat-bread-crumb-spacer {
+//     margin-left: -20px;
+//   }
+
+
+.custom-bread-crumb {
+    padding: 10px 16px;
+    list-style: none;
+    /* background-color: #eee; */
+  }
+  .custom-bread-crumb li {
+    display: inline;
+    /* font-size: 18px; */
+  }
+  .custom-bread-crumb .line {
+    padding-right: 3px;
+
+  }
+  .custom-bread-crumb li a {
+    /* color: #0275d8; */
+    text-decoration: none;
+  }
+  .custom-bread-crumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
