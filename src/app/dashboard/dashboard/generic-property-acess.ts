@@ -1,3 +1,5 @@
+import { type } from "os";
+
 interface MyPerson {
     name: string, 
     age: number,
@@ -13,7 +15,7 @@ const person = {
 
   type PersonKeys = keyof Person;
   //type AccordionItemsKeys = "header" | "content"
-
+ 
   type PersonTypes = Person[PersonKeys];
 
   let personTypes:PersonTypes;
@@ -91,3 +93,90 @@ const person = {
         name: 'Todd',
         age: 28
     } 
+
+
+
+
+    //Discriminated Unions
+
+    const enum Entity {
+      Individual , Corporation
+    }
+
+    interface Individual {
+      type: Entity.Individual,
+      ssn: string;
+    }
+
+    interface Corporation {
+      type: Entity.Corporation,
+      ein: string;
+    }
+
+
+    type TaxPayer = Individual | Corporation ;
+
+    const payer : TaxPayer = {
+      type: Entity.Individual,
+      ssn: 'hgfdhgfd'
+    }
+
+    function getPayerType(payer:TaxPayer){
+      if(payer.type === Entity.Individual) {
+        console.log( payer.ssn);
+        // console.log( payer.ein);
+       } else {
+        //  console.log( payer.ssn);
+         console.log( payer.ein);
+       }
+    }
+  
+    interface IRectangle {
+      type: 'Rectangle'
+      width: number
+      height: number
+    }
+    interface ICircle {
+        type: 'Circle'
+        radius: number
+    }
+
+    interface ITriangle {
+      type: 'Triangle'
+      side: number
+  }
+
+    type Shape = IRectangle | ICircle | ITriangle
+    
+    function area(shape: Shape): number {
+      switch (shape.type) {
+          case 'Rectangle':
+              return shape.width * shape.height
+          case 'Circle':
+              return Math.PI * Math.pow(shape.radius, 2)
+          default:
+              const msg: never = shape
+              throw new TypeError(`Unknown type: ${msg}`)
+      }
+  }
+
+
+  let tupple: [ string , number ]; 
+  tupple = [ 'asd',5];
+ 
+ 
+  interface ITuple
+  {
+   0: boolean,
+   1: number
+  };
+  
+  let y: ITuple;
+  y = [false, 0, 3, 3, true];
+
+
+  type IDictionary = [string, number];
+
+  let myDictionary: IDictionary[];
+
+  myDictionary['key1'] = 5;
