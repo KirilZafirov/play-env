@@ -13,8 +13,8 @@ export class DynamicSelectComponent {
   @Input() options: string[];
   @Output() selectionChanged = new EventEmitter<string>();
 
-  @ContentChild('selectedTemplate', {static: false}) selectedTemplateRef: TemplateRef<any>;
-  @ContentChild('optionTemplate', {static: false}) optionTemplateRef: TemplateRef<any>;
+  @ContentChild('selectedTemplate') selectedTemplateRef: TemplateRef<any>;
+  @ContentChild('optionTemplate') optionTemplateRef: TemplateRef<any>;
 
   selectOption(option: string) {
     this.picked = option;

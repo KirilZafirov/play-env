@@ -10,7 +10,7 @@ import * as d3 from 'd3';
   styleUrls: ['./barchart.component.scss'],  
 })
 export class BarchartComponent { 
-  @ViewChild('chart',  {static: false}) chartContainer: ElementRef;
+  @ViewChild('chart') chartContainer: ElementRef;
   @Input() data: Array<any>;
   
 

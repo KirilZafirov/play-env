@@ -6,7 +6,7 @@ import { Component, OnInit, ViewChild, TemplateRef, AfterViewInit, ViewContainer
   styleUrls: ['./example-dynamic.component.scss']
 })
 export class ExampleDynamicComponent implements OnInit , AfterViewInit {
-  @ViewChild('helloTemplate', {static: false}) helloTemplate: TemplateRef<any>;
+  @ViewChild('helloTemplate') helloTemplate: TemplateRef<any>;
   constructor(private viewContainer: ViewContainerRef) { }
 
   ngOnInit() {

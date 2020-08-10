@@ -23,9 +23,7 @@ import { TemperatureConverterComponent } from './components/temperature-converto
 import { ExampleDynamicComponent } from './dynamic-components/example-dynamic/example-dynamic.component';
 import { DynamicSelectComponent } from './dynamic-components/template-outlet/select.component';
 import { ClientOneComponent } from './dynamic-components/template-outlet/client-1/client-one.component';
-import { ClientTwoComponent } from './dynamic-components/template-outlet/client-2/client-two.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown'; 
+import { ClientTwoComponent } from './dynamic-components/template-outlet/client-2/client-two.component'; 
 import { AccordionModule } from './dynamic-components/accordion/accordion.module';
 import { BarchartComponent } from './components/barchart/barchart.component';
 import { BarchartShellComponent } from './components/barchart/barchart-shell.component';
@@ -61,9 +59,7 @@ export const declarations = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule ,
-    MaterialModule,
-    AngularFontAwesomeModule,
-    BsDropdownModule.forRoot() ,
+    MaterialModule, 
     AccordionModule
   ],
   declarations: [...declarations],
@@ -72,9 +68,7 @@ export const declarations = [
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    FlexLayoutModule ,
-    AngularFontAwesomeModule,
-    BsDropdownModule,
+    FlexLayoutModule , 
     declarations ,
     AccordionModule
   ],

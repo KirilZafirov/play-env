@@ -1,4 +1,3 @@
-import { type } from "os";
 
 interface MyPerson {
     name: string, 
@@ -155,7 +154,7 @@ const person = {
           case 'Circle':
               return Math.PI * Math.pow(shape.radius, 2)
           default:
-              const msg: never = shape
+              const msg: ITriangle = shape
               throw new TypeError(`Unknown type: ${msg}`)
       }
   }
